@@ -1,5 +1,5 @@
 import functions_framework
 
-@functions_framework.http
-def helloGET(request):
+@functions_framework.cloud_event
+def helloGET(cloud_event):
     print('Hello world')
