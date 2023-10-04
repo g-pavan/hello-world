@@ -1,0 +1,4 @@
+  steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['functions', 'deploy', 'cicd-function', '--trigger-topic=projects/project-mawa/topics/github-cicd', '--runtime', 'python311', '--entry-point', 'helloGET']
+  dir: 'gcf_hello_world'
