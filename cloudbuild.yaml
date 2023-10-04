@@ -10,7 +10,7 @@ steps:
       - '--runtime'
       - 'python311'
       - '--trigger-topic'
-      - 'projects/project-mawa/topics/github-cicd'
+      - 'github-cicd'
       - '--allow-unauthenticated'
       - '--source'
       - 'gcf_hello_world'
