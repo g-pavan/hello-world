@@ -1,6 +1,4 @@
 steps:
-  - name: 'gcr.io/cloud-builders/git'
-    args: ['clone', 'https://github.com/g-pavan/hello-world.git', 'gcf_hello_world']
   - name: 'python:3.11'
     entrypoint: 'pip'
     args: ['install', '-r', 'gcf_hello_world/requirements.txt']
@@ -10,9 +8,9 @@ steps:
       - 'deploy'
       - 'github-cloud-functions'
       - '--runtime'
-      - 'python311'  
+      - 'python311'
       - '--trigger-topic'
-      - 'projects/project-mawa/topics/github-cicd'  
+      - 'projects/project-mawa/topics/github-cicd'
       - '--allow-unauthenticated'
       - '--source'
       - 'gcf_hello_world'
